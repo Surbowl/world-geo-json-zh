@@ -7,7 +7,7 @@ the data
 
 geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries, version 4.1.0）
 
-JSON 结构如下：
+**JSON 结构：**
 ```javascript
 {
    "type": "FeatureCollection",
@@ -30,7 +30,10 @@ JSON 结构如下：
 }
 ```
 
-包含国家/地区：
+**Properties：**
+
+ISO Country Codes 未定义时用 -99 替代
+
 |iso_a2|iso_a3|iso_n3|name|
 |------|------|------|----|
 |FJ|FJI|242|斐济|
