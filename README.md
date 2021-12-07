@@ -40,4 +40,4 @@ GIS 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cul
 ```
 
 ### 贡献
-欢迎大家在 Issues 中提交意见建议；GIS 数据来自 [Natural Earth](https://www.naturalearthdata.com/)，因此本仓库不接受修改 GeoJSON 的 PR。
+欢迎大家在 Issues 中提交意见建议；GIS 数据来自 [Natural Earth](https://www.naturalearthdata.com/)，因此本仓库不接受修改 coordinates 的 PR。
