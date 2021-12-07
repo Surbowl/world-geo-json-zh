@@ -1,4 +1,4 @@
-world geo json zh
+world-geo-json-zh
 ===============
 简体中文 Geo JSON 世界地图（zh-Hans, 1:110m）
 
@@ -7,21 +7,22 @@ the data
 
 geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries, version 4.1.0）
 
+JSON 结构如下：
 ```javascript
 {
-   "type":"FeatureCollection",
-   "features":[
+   "type": "FeatureCollection",
+   "features": [
       {
-         "type":"Feature",
-         "properties":{
-            "name":"斐济",
-            "iso_a2":"FJ",      // ISO 3166 Alpha-2 code
-            "iso_a3":"FJI",     // ISO 3166 Alpha-3 code
-            "iso_n3":"242"      // ISO 3166 Numeric code
+         "type": "Feature",
+         "properties": {
+            "name": "斐济",
+            "iso_a2": "FJ",      // ISO 3166 Alpha-2 code
+            "iso_a3": "FJI",     // ISO 3166 Alpha-3 code
+            "iso_n3": "242"      // ISO 3166 Numeric code
          },
-         "geometry":{
-            "type":"MultiPolygon",
-            "coordinates":[ ...... ]
+         "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [ ...... ]
          }
       },
       ......
@@ -29,6 +30,7 @@ geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110
 }
 ```
 
+包含国家/地区：
 |iso_a2|iso_a3|iso_n3|name|
 |------|------|------|----|
 |FJ|FJI|242|斐济|
