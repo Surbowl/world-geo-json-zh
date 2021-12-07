@@ -15,10 +15,10 @@ geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110
       {
          "type": "Feature",
          "properties": {
-            "name": "斐济",
-            "iso_a2": "FJ",      // ISO 3166 Alpha-2 code
-            "iso_a3": "FJI",     // ISO 3166 Alpha-3 code
-            "iso_n3": "242"      // ISO 3166 Numeric code
+            "name": "中华人民共和国",
+            "iso_a2": "CN",   // ISO 3166 Alpha-2 code
+            "iso_a3": "CHN",  // ISO 3166 Alpha-3 code
+            "iso_n3": "156"   // ISO 3166 Numeric code
          },
          "geometry": {
             "type": "MultiPolygon",
@@ -30,9 +30,9 @@ geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110
 }
 ```
 
-**Properties：**
+**国家/地区列表：**
 
-ISO Country Codes 未定义时用 -99 替代
+ISO Country Code 未定义时用 -99 替代
 
 |iso_a2|iso_a3|iso_n3|name|
 |------|------|------|----|
