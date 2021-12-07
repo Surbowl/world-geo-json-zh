@@ -11,7 +11,7 @@ GIS 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cul
       {
          "type":"Feature",
          "properties":{
-            "name":"斐濟",
+            "name":"斐济",
             "iso_a2":"FJ",      // ISO alpha-2
             "iso_a3":"FJI",     // ISO alpha-3
             "iso_n3":"242"      // UN M49 Numerical Code

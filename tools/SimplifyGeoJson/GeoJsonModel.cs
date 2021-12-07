@@ -1,40 +1,41 @@
-﻿record GeoJsonModel
+﻿class GeoJsonModel
 {
-    public string Type { get; init; }
+    public string Type { get; set; }
 
-    public IEnumerable<Feature> Features { get; init; }
+    public IEnumerable<Feature> Features { get; set; }
 }
 
-record Feature
+class Feature
 {
-    public string Type { get; init; }
+    public string Type { get; set; }
 
-    public Properties Properties { get; init; }
+    public Properties Properties { get; set; }
 
-    public object Geometry { get; init; }
+    public object Geometry { get; set; }
 }
 
-record Properties
+class Properties
 {
     private string _name;
 
     public string Name
     {
         get => _name;
+        set => _name = value;
     }
 
     [JsonProperty("name_zh")]
     public string? NameZh
     {
-        init => _name = value;
+        set => _name = value;
     }
 
     [JsonProperty("iso_a2")]
-    public string IsoA2 { get; init; }
+    public string IsoA2 { get; set; }
 
     [JsonProperty("iso_a3")]
-    public string IsoA3 { get; init; }
+    public string IsoA3 { get; set; }
 
     [JsonProperty("iso_n3")]
-    public string IsoN3 { get; init; }
+    public string IsoN3 { get; set; }
 }
