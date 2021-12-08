@@ -15,7 +15,7 @@ geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110
       {
          "type": "Feature",
          "properties": {
-            "name": "中华人民共和国",
+            "name": "中国",   // 国家或地区的惯用名
             "iso_a2": "CN",   // ISO 3166 Alpha-2 code
             "iso_a3": "CHN",  // ISO 3166 Alpha-3 code
             "iso_n3": "156"   // ISO 3166 Numeric code
