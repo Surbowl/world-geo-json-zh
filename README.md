@@ -5,7 +5,7 @@ world-geo-json-zh
 the data
 --------
 
-geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries, version 4.1.0）
+geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0）
 
 **JSON 结构：**
 ```javascript
