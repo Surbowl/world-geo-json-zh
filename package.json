@@ -1,7 +1,8 @@
 {
   "name": "@surbowl/world-geo-json-zh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "简体中文 GeoJSON 世界地图（zh-Hans, 1:110m）",
+  "keywords": ["map", "geojson", "gis", "echarts"],
   "main": "world.zh.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
