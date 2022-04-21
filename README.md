@@ -2,12 +2,17 @@ world-geo-json-zh
 ===============
 简体中文 Geo JSON 世界地图（zh-Hans, 1:110m）
 
-the data
+Install
 --------
+```
+npm i @surbowl/world-geo-json-zh
+```
 
+The data
+--------
 geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0）
 
-**JSON 结构：**
+**Json 结构：**
 ```javascript
 {
    "type": "FeatureCollection",
@@ -38,6 +43,10 @@ geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110
 |-99|-99|-99|索马里兰|
 |XK|-99|-99|科索沃|
 
-contributing
+License
+------------
+[The Unlicense](https://github.com/Surbowl/world-geo-json-zh/blob/main/LICENSE)
+
+Contributing
 ------------
 欢迎大家在 Issues 中提交意见建议；geometry 数据来自 Natural Earth，请勿提交修改 geometry 属性的 PR。
