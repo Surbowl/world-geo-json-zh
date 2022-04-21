@@ -10,9 +10,9 @@ npm i @surbowl/world-geo-json-zh
 
 The data
 --------
-geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0）
+Geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0）
 
-**Json 结构：**
+**Properties:**
 ```javascript
 {
    "type": "FeatureCollection",
