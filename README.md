@@ -35,11 +35,11 @@ JSON 结构
 
 本项目基于 [Natural Earth](https://www.naturalearthdata.com/) 的 [1:110m 地图](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/)（1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0），并作出如下调整：
 
-|序号|调整|原因|
+||调整|原因|
 |----|----|----|
-|1|将台湾（TWN）合并到中国（CHN）中|略|
-|2|在地图中添加巴林（BHR）|由于面积较小，原版 Natural Earth 1:110m 地图中省略了巴林|
-|3|在地图中添加新加坡（SGP）|由于面积较小，原版 Natural Earth 1:110m 地图中省略了新加坡|
+|1|将台湾（TWN）合并到中国（CHN）||
+|2|添加巴林（BHR）|由于面积小于阈值，Natural Earth 的 1:110m 数据源未绘出巴林|
+|3|添加新加坡（SGP）|由于面积小于阈值，Natural Earth 的 1:110m 数据源未绘出新加坡|
 
 下列国家或地区暂无 ISO 3166 代码，用 -99 代替：
 
