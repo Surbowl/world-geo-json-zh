@@ -10,9 +10,7 @@ npm i @surbowl/world-geo-json-zh
 
 The data
 --------
-Geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0）
-
-**Properties:**
+JSON 结构
 ```javascript
 {
    "type": "FeatureCollection",
@@ -35,13 +33,21 @@ Geometry 数据来自 [Natural Earth](https://www.naturalearthdata.com/)（1:110
 }
 ```
 
-以下国家或地区的 ISO 3166 Country Code 未定义，用 -99 表示
+本项目基于 [Natural Earth](https://www.naturalearthdata.com/) 的 [1:110m 地图](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/)（1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0），并对下列国家或地区做出调整：
 
-|iso_a2|iso_a3|iso_n3|name|
+|name|iso_a2|iso_a3|iso_n3|调整|备注|
+|------|------|------|----|----|----|
+|巴林|BH|BHR|048|增加|由于面积较小，在原版 Natural Earth 1:110m 地图中被省略|
+|新加坡|SG|SGP|702|增加|由于面积较小，在原版 Natural Earth 1:110m 地图中被省略|
+|台湾|TW|TWN|158|不单独列出|合并到中国（iso_a3：CHN）|
+
+下列国家或地区暂无 ISO 3166 代码，用 -99 代替：
+
+|name|iso_a2|iso_a3|iso_n3|
 |------|------|------|----|
-|-99|-99|-99|北赛普勒斯土耳其共和国|
-|-99|-99|-99|索马里兰|
-|XK|-99|-99|科索沃|
+|北赛普勒斯土耳其共和国|-99|-99|-99|
+|索马里兰|-99|-99|-99|
+|科索沃|XK|-99|-99|
 
 License
 ------------
@@ -49,4 +55,4 @@ License
 
 Contributing
 ------------
-欢迎大家在 Issues 中提交意见建议；geometry 数据来自 Natural Earth，请勿提交修改 geometry 属性的 PR。
+欢迎大家在 Issues 中提交意见建议
