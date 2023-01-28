@@ -1,7 +1,7 @@
 {
   "name": "@surbowl/world-geo-json-zh",
-  "version": "1.0.3",
-  "description": "简体中文 GeoJSON 世界地图（zh-Hans, 1:110m）",
+  "version": "1.1.0",
+  "description": "简体中文 Geo JSON 世界地图（zh-Hans, 1:110m），带有国家地区的 ISO 3166 代码、中文简称与全称，可用于 ECharts 等工具中。",
   "keywords": ["map", "geojson", "gis", "echarts"],
   "main": "world.zh.json",
   "scripts": {

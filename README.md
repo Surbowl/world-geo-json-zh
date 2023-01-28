@@ -1,6 +1,6 @@
 world-geo-json-zh
 ===============
-简体中文 Geo JSON 世界地图（zh-Hans, 1:110m），带有国家地区的 ISO 3166 代码、中文简称与全称。
+简体中文 Geo JSON 世界地图（zh-Hans, 1:110m），带有国家地区的 ISO 3166 代码、中文简称与全称，可用于 ECharts 等工具中。
 
 Install
 --------
