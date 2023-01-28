@@ -51,6 +51,12 @@ The data
 }
 ``` 
 
+**地图比例**
+
+- 1:110,000,000
+- 1″ = 1,736 miles
+- 1 cm = 1,100 km
+
 **注意事项**
 
 国际标准化组织尚未制定下列国家地区的 ISO 3166 代码，无法通过 ISO 3166 代码匹配到下列国家地区。您可以根据业务需要将 -99 替换为自定义值。
@@ -63,7 +69,7 @@ The data
 
 **参考文献**
 
-- [1] [Natural Earth](https://www.naturalearthdata.com/). [1:110m Cultural Vectors 地图](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/). （1:110m Cultural Vectors, Admin 0 – Countries 5.0.0-pre3, version 4.1.0）.
+- [1] [Natural Earth](https://www.naturalearthdata.com/). [1:110m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/). （version 5.1.1）.
 - [2] [中华人民共和国外交部](https://www.mfa.gov.cn/). [国家（地区）列表](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/yz_676205/).
 - [3] [联合国](https://www.un.org/). [会员国名单](https://www.un.org/zh/about-us/member-states).
 - [4] [国际标准化组织](https://www.iso.org/). [ISO 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html).
