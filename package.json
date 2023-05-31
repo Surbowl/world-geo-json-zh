@@ -1,8 +1,8 @@
 {
   "name": "@surbowl/world-geo-json-zh",
-  "version": "1.2.1",
-  "description": "Geo JSON Countries map (1:110m) in simplified Chinese. 简体中文 Geo JSON 世界地图（1:110m），带有国家地区的 ISO 3166 代码、中文简称与全称，可用于 ECharts 等工具中。",
-  "keywords": ["map", "countries", "geo", "geojson", "gis", "echarts", "chinese"],
+  "version": "2.0.0",
+  "description": "A GeoJson world map in Simplified Chinese, with ISO 3166 Codes, Chinese short names, and full names of countries and regions. 简体中文 GeoJson 世界地图，带有国家地区的 ISO 3166 代码、中文简称与全称",
+  "keywords": ["map", "countries", "geo", "geojson", "gis", "echarts", "chinese", "zh"],
   "main": "world.zh.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
