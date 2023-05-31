@@ -68,6 +68,10 @@ The data
 |索马里兰|-99|-99|-99|
 |锡亚琴冰川|-99|-99|-99|
 
+**补充数据**
+
+如果您需要分开展示中国内地、中国香港、中国澳门、中国台湾的数据，请参考 Issue [《有没有内地和港澳台四个单独拿出来绘制的版本呢》](https://github.com/Surbowl/world-geo-json-zh/issues/5)
+
 **参考文献**
 
 - [1] [Natural Earth](https://www.naturalearthdata.com/). [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/). （version 5.1.1）.
