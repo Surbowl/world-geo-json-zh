@@ -6,6 +6,13 @@ A GeoJson world map in Simplified Chinese, with ISO 3166 Codes, Chinese short na
 
 Install
 --------
+
+```
+<script type="module">
+    import worldGeoJsonZh from 'https://cdn.jsdelivr.net/npm/@surbowl/world-geo-json-zh/+esm'
+</script>
+```
+**or**
 ```
 npm i @surbowl/world-geo-json-zh
 ```

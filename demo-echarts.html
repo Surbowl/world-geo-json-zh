@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+    <script type="module">
+        import worldGeoJsonZh  from 'https://cdn.jsdelivr.net/npm/@surbowl/world-geo-json-zh/+esm'
+        console.log(worldGeoJsonZh)
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var option;
+        echarts.registerMap('WorldZh', worldGeoJsonZh);
+        var nameDic = {};
+        worldGeoJsonZh.features.forEach(f => {
+            nameDic[f.properties.name] = `${f.properties.name}\n${f.properties.full_name}\n${f.properties.iso_a2}\n${f.properties.iso_a3}\n${f.properties.iso_n3}`
+        });
+        option = {
+            tooltip: {
+                trigger: 'item',
+                showDelay: 0,
+                transitionDuration: 0.2
+            },
+            series: [
+                {
+                    name: 'Demo',
+                    type: 'map',
+                    roam: true,
+                    map: 'WorldZh',
+                    nameProperty: 'name',
+                    nameMap: nameDic,
+                    emphasis: {
+                        label: {
+                            show: true
+                        }
+                    },
+                    data: [ ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
