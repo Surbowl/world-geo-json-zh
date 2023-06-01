@@ -4,6 +4,8 @@ world-geo-json-zh
 
 A GeoJson world map in Simplified Chinese, with ISO 3166 Codes, Chinese short names, and full names of countries and regions.
 
+👉 See [Echarts Demo](https://surbowl.github.io/world-geo-json-zh/demo-echarts.html)
+
 Install
 --------
 
