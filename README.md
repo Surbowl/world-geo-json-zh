@@ -1,13 +1,18 @@
 world-geo-json-zh
 ===============
+[![](https://img.shields.io/github/license/Surbowl/world-geo-json-zh)](https://github.com/Surbowl/world-geo-json-zh/blob/main/LICENSE)
+[![](https://img.shields.io/github/package-json/v/Surbowl/world-geo-json-zh)](https://github.com/Surbowl/world-geo-json-zh/releases)
+
 简体中文 Geo JSON 世界地图，带有国家（地区）的 ISO 3166 代码、中文简称与全称。
 
 A GeoJson world map in Simplified Chinese, with ISO 3166 Codes, Chinese short names, and full names of countries and regions.
 
-👉 See [Echarts Demo](https://surbowl.github.io/world-geo-json-zh/demo-echarts.html)
+👉 [See Demo](https://surbowl.github.io/world-geo-json-zh/demo-echarts.html)
 
 Install
 --------
+[![](https://data.jsdelivr.com/v1/package/npm/@surbowl/world-geo-json-zh/badge)](https://www.jsdelivr.com/package/npm/@surbowl/world-geo-json-zh)
+[![](https://img.shields.io/npm/dm/@surbowl/world-geo-json-zh?label=npm)](https://www.npmjs.com/package/@surbowl/world-geo-json-zh)
 
 ```
 <script type="module">
