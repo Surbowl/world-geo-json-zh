@@ -23,11 +23,6 @@
         // init chart
         var myChart = echarts.init(chartDom);
         echarts.registerMap('WorldZh', worldGeoJsonZh);
-        // build echarts nameMap
-        var nameDic = {};
-        worldGeoJsonZh.features.forEach(f => {
-            nameDic[f.properties.name] = `${f.properties.name}\n${f.properties.full_name}\n${f.properties.iso_a2}\n${f.properties.iso_a3}\n${f.properties.iso_n3}`
-        });
         // echarts map options
         var option = {
             tooltip: {
@@ -42,7 +37,6 @@
                     roam: true,
                     map: 'WorldZh',
                     nameProperty: 'name',
-                    nameMap: nameDic,
                     emphasis: {
                         label: {
                             show: true
