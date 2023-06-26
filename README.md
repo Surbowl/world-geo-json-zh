@@ -5,7 +5,7 @@ world-geo-json-zh
 
 简体中文 Geo JSON 世界地图，带有国家（地区）的 ISO 3166 代码、中文简称与全称。
 
-A GeoJson world map in Simplified Chinese, with ISO 3166 Codes, Chinese short names, and full names of countries and regions.
+A simplified Chinese world map in GeoJSON format, including ISO 3166 codes, Chinese short names, and full names of countries (regions).
 
 👉 [See Demo](https://surbowl.github.io/world-geo-json-zh/demo-echarts.html)
 
@@ -24,9 +24,9 @@ Install
 npm i @surbowl/world-geo-json-zh
 ```
 
-The data
+Data
 --------
-**JSON 结构**
+**Properties**
 
 ```javascript
 {
@@ -67,26 +67,24 @@ The data
 }
 ``` 
 
-**地图精度**
+**Source**
 
 基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 数据集生成，为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 简化了 10% 的细节（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。
 
-**注意事项**
+**Note**
 
-国际标准化组织尚未制定下列国家（地区）的 ISO 3166 代码，无法通过 ISO 3166 代码匹配到下列国家（地区），您可根据业务需要将 -99 替换为自定义值。
+- 如果您需要区分中国内地、中国香港、中国澳门、中国台湾，请参考 Issue [《有没有内地和港澳台四个单独拿出来绘制的版本呢》](https://github.com/Surbowl/world-geo-json-zh/issues/5)。
+  
+- 国际标准化组织尚未制定下列国家（地区）的 ISO 3166 代码，无法通过 ISO 3166 代码匹配到下列国家（地区），您可根据业务需要将 -99 替换为自定义值。
+  
+    |name|iso_a2|iso_a3|iso_n3|
+    |------|------|------|----|
+    |科索沃|XK|-99|-99|
+    |北塞浦路斯|-99|-99|-99|
+    |索马里兰|-99|-99|-99|
+    |锡亚琴冰川|-99|-99|-99|
 
-|name|iso_a2|iso_a3|iso_n3|
-|------|------|------|----|
-|科索沃|XK|-99|-99|
-|北塞浦路斯|-99|-99|-99|
-|索马里兰|-99|-99|-99|
-|锡亚琴冰川|-99|-99|-99|
-
-**补充数据**
-
-如果您需要区分中国内地、中国香港、中国澳门、中国台湾，请参考 Issue [《有没有内地和港澳台四个单独拿出来绘制的版本呢》](https://github.com/Surbowl/world-geo-json-zh/issues/5)
-
-**参考文献**
+**References**
 
 - [1] [Natural Earth](https://www.naturalearthdata.com/). [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/). （version 5.1.1）.
 - [2] [中华人民共和国外交部](https://www.mfa.gov.cn/). [国家（地区）列表](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/yz_676205/).
