@@ -73,10 +73,9 @@ Data
 
 此外还通过参考下列地图对结果进行补充完善：
 - 参照 Natural Earth [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/) 地图
-    - 补充美国本土外小岛屿（iso_a2: UM）
+    - 增加美国本土外小岛屿（iso_a2: UM）
 - 参照[高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector)
-    - 补充中国藏南地区
-    - 补充中国南海海域十段线
+    - 增加中国南海海域十段线
 
 **Note**
 
