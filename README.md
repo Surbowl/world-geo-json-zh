@@ -71,11 +71,12 @@ Data
 
 本项目基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 地图生成，为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 以 Douglas-Peucker 方法进行简化处理（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。
 
-此外还通过参考下列地图对结果进行补充完善：
+此外还通过参考下列地图对结果进行补充：
 - 参照阿里云 DataV [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector)
-    - 增加中国南海海域十段线
+    - 补充中国南海海域十段线与群岛地图
+    - 补充中国藏南地区地图
 - 参照 Natural Earth [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/) 地图
-    - 增加美国本土外小岛屿（iso_a2: UM）
+    - 补充美国本土外小岛屿（iso_a2: UM）地图
 
 **Note**
 
