@@ -71,12 +71,14 @@ Data
 
 本项目基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 地图生成，为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 以 Douglas-Peucker 方法进行简化处理（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。
 
-此外还通过参考下列地图对结果进行补充：
+此外通过参考下列地图对结果进行调整：
 - 参照阿里云 DataV [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector)
-    - 补充中国南海海域十段线与群岛地图
-    - 补充中国藏南地区地图
+    - 增加：中国南海海域十段线与群岛地图
+    - 调整：中国黑瞎子岛界限
+    - 调整：中国藏南地区界限
+    - 调整：中国西藏阿里地区同印度喜马偕尔邦和北方邦接壤部分界限
 - 参照 Natural Earth [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/) 地图
-    - 补充美国本土外小岛屿（iso_a2: UM）地图
+    - 增加：美国本土外小岛屿（iso_a2: UM）地图
 
 **Note**
 
