@@ -83,9 +83,8 @@ Data
     - 增加：美国本土外小岛屿（iso_a2: UM）地图
 
 **Note**
+- 如需区分中国内地、中国香港、中国澳门、中国台湾，请查看 Issue [《有没有内地和港澳台四个单独拿出来绘制的版本呢》](https://github.com/Surbowl/world-geo-json-zh/issues/5) ，或参考[带注释的 JSONC 文件](https://github.com/Surbowl/world-geo-json-zh/blob/main/world.zh.jsonc)
 
-- 如果您需要区分中国内地、中国香港、中国澳门、中国台湾，请参考 Issue [《有没有内地和港澳台四个单独拿出来绘制的版本呢》](https://github.com/Surbowl/world-geo-json-zh/issues/5)。
-  
 - 国际标准化组织尚未制定下列国家（地区）的 ISO 3166 代码，无法通过 ISO 3166 代码匹配到下列国家（地区），您可根据业务需要将 -99 替换为自定义值。
   
     |name|iso_a2|iso_a3|iso_n3|
