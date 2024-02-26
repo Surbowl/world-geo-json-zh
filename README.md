@@ -71,7 +71,7 @@ Data
 
 **Source**
 
-本项目基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 地图生成，为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 以 Douglas-Peucker 方法进行简化处理（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。
+本项目基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 地图生成，为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 以 Douglas-Peucker 算法进行简化处理（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。
 
 此外通过参考下列地图对结果进行调整：
 - 参照阿里云 DataV [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector)
@@ -100,7 +100,7 @@ Data
 - [1] [Natural Earth](https://www.naturalearthdata.com/). [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/). （version 5.1.1）.
 - [2] [Natural Earth](https://www.naturalearthdata.com/). [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/). （version 5.1.1）.
 - [3] [阿里云 DataV](https://datav.aliyun.com/). [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector). （2021.5 版本数据）.
-- [4] [中华人民共和国自然资源部](https://www.mnr.gov.cn/). [中国地图 1∶740万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc2187%22).
+- [4] [中华人民共和国自然资源部](https://www.mnr.gov.cn/). [中国地图 1∶740万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc2187%22). （审图号：GS(2023)2767号）.
 - [5] [中华人民共和国外交部](https://www.mfa.gov.cn/). [国家（地区）列表](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/yz_676205/).
 - [6] [国际标准化组织](https://www.iso.org/). [ISO 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html).
 - [7] [联合国](https://www.un.org/). [会员国名单](https://www.un.org/zh/about-us/member-states).
