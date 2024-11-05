@@ -82,6 +82,8 @@ Data
     - 调整：中国西藏阿里地区同印度喜马偕尔邦和北方邦接壤部分界限
 - 参照 Natural Earth [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/) 地图
     - 增加：美国本土外小岛屿（iso_a2: UM）地图
+- 根据中华人民共和国外交部[《塞尔维亚国家概况》](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/oz_678770/1206_679642/1206x0_679644/)与[《常驻联合国代表傅聪大使在安理会科索沃问题公开会上的发言》](https://www.fmprc.gov.cn/zwbd_673032/wjzs/202404/t20240423_11286751.shtml)
+    - 调整：将“塞尔维亚”与“科索沃”合并为“塞尔维亚”
 
 **Note**
 - 如需区分中国内地、中国香港、中国澳门、中国台湾，请查看 Issue [《有没有内地和港澳台四个单独拿出来绘制的版本呢》](https://github.com/Surbowl/world-geo-json-zh/issues/5) ，或参考[带注释的 JSONC 文件](https://github.com/Surbowl/world-geo-json-zh/blob/main/world.zh.jsonc)
@@ -90,7 +92,6 @@ Data
   
     |name|iso_a2|iso_a3|iso_n3|
     |------|------|------|----|
-    |科索沃|XK|-99|-99|
     |北塞浦路斯|-99|-99|-99|
     |索马里兰|-99|-99|-99|
     |锡亚琴冰川|-99|-99|-99|
