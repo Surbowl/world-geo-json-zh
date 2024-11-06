@@ -77,14 +77,14 @@ npm i @surbowl/world-geo-json-zh
 本项目基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 地图生成。为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 以 Douglas-Peucker 算法进行简化处理（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。并参照下列地图对结果进行调整：
 - 参照中华人民共和国自然资源部[中国地图 1:740万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc2187%22)（审图号：GS(2023)2767 号）
     - 调整：台湾合并到中国
-- 参照中华人民共和国自然资源部[世界地图 1:4100万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc0671%22)（审图号：GS(2021)5443 号）
-    - 调整：科索沃合并到塞尔维亚
-- 参照阿里云 DataV [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector)
+- 参照阿里云 DataV [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector)（审图号：GS京(2022)1061 号）.
     - 增加：中国南海海域十段线与群岛地图
     - 增加：中国钓鱼岛与赤尾屿地图
     - 调整：中国黑瞎子岛界限
     - 调整：中国藏南地区界限
     - 调整：中国西藏阿里地区同印度喜马偕尔邦和北方邦接壤部分界限
+- 参照中华人民共和国自然资源部[世界地图 1:4100万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc0671%22)（审图号：GS(2021)5443 号）
+    - 调整：科索沃合并到塞尔维亚
 - 参照 Natural Earth [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/) 地图
     - 增加：美国本土外小岛屿（iso_a2: UM）地图
 
@@ -103,7 +103,7 @@ npm i @surbowl/world-geo-json-zh
 
 - [1] [Natural Earth](https://www.naturalearthdata.com/). [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/). （version 5.1.1）.
 - [2] [Natural Earth](https://www.naturalearthdata.com/). [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/). （version 5.1.1）.
-- [3] [阿里云 DataV](https://datav.aliyun.com/). [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector). （2021.5 版本数据）.
+- [3] [阿里云 DataV](https://datav.aliyun.com/). [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector). （审图号：GS京(2022)1061 号）.
 - [4] [中华人民共和国自然资源部](https://www.mnr.gov.cn/). [中国地图 1:740万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc2187%22). （审图号：GS(2023)2767 号）.
 - [5] [中华人民共和国自然资源部](https://www.mnr.gov.cn/). [世界地图 1:4100万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc0671%22). （审图号：GS(2021)5443 号）.
 - [6] [中华人民共和国外交部](https://www.mfa.gov.cn/). [国家（地区）列表](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/yz_676205/).
