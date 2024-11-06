@@ -11,24 +11,27 @@ A simplified Chinese world map in GeoJSON format, including ISO 3166 codes, Chin
 
 👀 [Demo](https://surbowl.github.io/world-geo-json-zh/demo-echarts.html)
 
-Install
+安装
 --------
-[![](https://data.jsdelivr.com/v1/package/npm/@surbowl/world-geo-json-zh/badge)](https://www.jsdelivr.com/package/npm/@surbowl/world-geo-json-zh)
-[![](https://img.shields.io/npm/dm/@surbowl/world-geo-json-zh?label=npm)](https://www.npmjs.com/package/@surbowl/world-geo-json-zh)
+方式 1. js module
 
+[![](https://data.jsdelivr.com/v1/package/npm/@surbowl/world-geo-json-zh/badge)](https://www.jsdelivr.com/package/npm/@surbowl/world-geo-json-zh)
 ```
 <script type="module">
     import worldGeoJsonZh from 'https://cdn.jsdelivr.net/npm/@surbowl/world-geo-json-zh/+esm'
 </script>
 ```
-**or**
+
+方式 2. npm
+
+[![](https://img.shields.io/npm/dm/@surbowl/world-geo-json-zh?label=npm)](https://www.npmjs.com/package/@surbowl/world-geo-json-zh)
 ```
 npm i @surbowl/world-geo-json-zh
 ```
 
-Data
+关于数据
 --------
-**Properties**
+**JSON 格式**
 
 ```javascript
 {
@@ -69,11 +72,13 @@ Data
 }
 ``` 
 
-**Source**
+**来源**
 
-本项目基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 地图生成，为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 以 Douglas-Peucker 算法进行简化处理（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。
-
-此外通过参考下列地图对结果进行调整：
+本项目基于 Natural Earth [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) 地图生成。为降低文件体积，使用 [Mapshaper](https://github.com/mbloch/mapshaper) 以 Douglas-Peucker 算法进行简化处理（-simplify dp 10% keep-shapes），Polygon 坐标精确到小数点后 6 位。并参照下列地图对结果进行调整：
+- 参照中华人民共和国自然资源部[中国地图 1:740万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc2187%22)（审图号：GS(2023)2767 号）
+    - 调整：台湾合并到中国
+- 参照中华人民共和国自然资源部[世界地图 1:4100万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc0671%22)（审图号：GS(2021)5443 号）
+    - 调整：科索沃合并到塞尔维亚
 - 参照阿里云 DataV [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector)
     - 增加：中国南海海域十段线与群岛地图
     - 增加：中国钓鱼岛与赤尾屿地图
@@ -82,10 +87,8 @@ Data
     - 调整：中国西藏阿里地区同印度喜马偕尔邦和北方邦接壤部分界限
 - 参照 Natural Earth [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/) 地图
     - 增加：美国本土外小岛屿（iso_a2: UM）地图
-- 根据中华人民共和国外交部[《塞尔维亚国家概况》](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/oz_678770/1206_679642/1206x0_679644/)与[《常驻联合国代表傅聪大使在安理会科索沃问题公开会上的发言》](https://www.fmprc.gov.cn/zwbd_673032/wjzs/202404/t20240423_11286751.shtml)
-    - 调整：将“塞尔维亚”与“科索沃”合并为“塞尔维亚”
 
-**Note**
+**注意事项**
 - 如需区分中国内地、中国香港、中国澳门、中国台湾，请查看 Issue [《有没有内地和港澳台四个单独拿出来绘制的版本呢》](https://github.com/Surbowl/world-geo-json-zh/issues/5) ，或参考[带注释的 JSONC 文件](https://github.com/Surbowl/world-geo-json-zh/blob/main/world.zh.jsonc)
 
 - 国际标准化组织尚未制定下列国家（地区）的 ISO 3166 代码，无法通过 ISO 3166 代码匹配到下列国家（地区），您可根据业务需要将 -99 替换为自定义值。
@@ -96,22 +99,23 @@ Data
     |索马里兰|-99|-99|-99|
     |锡亚琴冰川|-99|-99|-99|
 
-**References**
+**引用**
 
 - [1] [Natural Earth](https://www.naturalearthdata.com/). [1:50m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/). （version 5.1.1）.
 - [2] [Natural Earth](https://www.naturalearthdata.com/). [1:10m Cultural Vectors Admin 0 – Countries](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/). （version 5.1.1）.
 - [3] [阿里云 DataV](https://datav.aliyun.com/). [高德地图](https://datav.aliyun.com/portal/school/atlas/area_selector). （2021.5 版本数据）.
-- [4] [中华人民共和国自然资源部](https://www.mnr.gov.cn/). [中国地图 1∶740万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc2187%22). （审图号：GS(2023)2767号）.
-- [5] [中华人民共和国外交部](https://www.mfa.gov.cn/). [国家（地区）列表](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/yz_676205/).
-- [6] [国际标准化组织](https://www.iso.org/). [ISO 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html).
-- [7] [联合国](https://www.un.org/). [会员国名单](https://www.un.org/zh/about-us/member-states).
-- [8] [联合国](https://www.un.org/). [非自治领土](https://www.un.org/dppa/decolonization/zh/nsgt).
-- [9] [联合国](https://www.un.org/). [前托管和非自治领土名单](https://www.un.org/dppa/decolonization/zh/history/former-trust-and-nsgts).
+- [4] [中华人民共和国自然资源部](https://www.mnr.gov.cn/). [中国地图 1:740万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc2187%22). （审图号：GS(2023)2767 号）.
+- [5] [中华人民共和国自然资源部](https://www.mnr.gov.cn/). [世界地图 1:4100万 对开](http://bzdt.ch.mnr.gov.cn/browse.html?picId=%224o28b0625501ad13015501ad2bfc0671%22). （审图号：GS(2021)5443 号）.
+- [6] [中华人民共和国外交部](https://www.mfa.gov.cn/). [国家（地区）列表](https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/yz_676205/).
+- [7] [国际标准化组织](https://www.iso.org/). [ISO 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html).
+- [8] [联合国](https://www.un.org/). [会员国名单](https://www.un.org/zh/about-us/member-states).
+- [9] [联合国](https://www.un.org/). [非自治领土](https://www.un.org/dppa/decolonization/zh/nsgt).
+- [10] [联合国](https://www.un.org/). [前托管和非自治领土名单](https://www.un.org/dppa/decolonization/zh/history/former-trust-and-nsgts).
 
 License
 ------------
 [The Unlicense](https://github.com/Surbowl/world-geo-json-zh/blob/main/LICENSE)
 
-Contributing
+参与
 ------------
-欢迎大家在 Issues 中提供建议、反馈 Bug ❤
+欢迎大家在 Issues 中提供建议、反馈问题❤
