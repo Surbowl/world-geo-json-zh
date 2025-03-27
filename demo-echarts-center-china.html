@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            text-align: center;
+        }
+        table {
+            margin: auto;
+            text-align: left;
+        }
+        footer{
+            padding: 2.5em;
+        }
+        #chart-container{
+            height: 520px;
+        }
+        .controls {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Map</h2>
+    <div class="controls">
+        <div class="control-group">
+            <label for="highlight-color">é«˜äº®é¢œè‰²:</label>
+            <input type="color" id="highlight-color" value="#ff0000">
+        </div>
+        <div class="control-group">
+            <label for="show-name">æ˜¯å¦æ˜¾ç¤ºåœ°åŒºåç§°:</label>
+            <input type="checkbox" id="show-name" checked>
+        </div>
+    </div>
+    <div id="chart-container"></div>
+
+    <h2>Table</h2>
+    <div id="table-container"></div>
+
+    <footer>
+       <a href="https://github.com/Surbowl/world-geo-json-zh">GitHub - Surbowl/world-geo-json-zh</a>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+    <script type="module">
+        // load word geo json zh data
+        import worldGeoJsonZh  from 'https://cdn.jsdelivr.net/npm/@surbowl/world-geo-json-zh/+esm'
+        console.log(worldGeoJsonZh)
+const process = item => {
+    if (item > -30) {
+        item = item - 180
+    } else {
+        item = item + 180
+    }
+    return item
+}
+// æ ¼é™µå…°å¤„ç†
+const processGreenland = item => {
+    return item + 180
+}
+
+worldGeoJsonZh.features.map((district, index) => {
+    if (district.properties.name === 'æ ¼é™µå…°') {
+        if (district.geometry.type === 'Polygon') {
+            district.geometry.coordinates.map(border => {
+                border.map(coord => {
+                    coord[0] = processGreenland(coord[0])
+                })
+            })
+        } else {
+            district.geometry.coordinates.map(border => {
+                border.map(coordinates => {
+                    coordinates.map(coord => {
+                        coord[0] = processGreenland(coord[0])
+                    })
+                })
+            })
+        }
+    } else {
+        if (district.geometry.type == 'Polygon') {
+            district.geometry.coordinates.map(border => {
+                border.map(coord => {
+                    coord[0] = process(coord[0])
+                })
+            })
+        } else {
+            district.geometry.coordinates.map(border => {
+                border.map(coordinates => {
+                    coordinates.map(coord => {
+                        coord[0] = process(coord[0])
+                    })
+                })
+            })
+        }
+    }
+})
+        var chartDom = document.getElementById("chart-container")
+        var tableDom = document.getElementById("table-container")
+        var colorPicker = document.getElementById("highlight-color")
+        var nameCheckbox = document.getElementById("show-name")
+
+        // init chart
+        var myChart = echarts.init(chartDom);
+        echarts.registerMap('WorldZh', worldGeoJsonZh);
+        
+        // echarts map options
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                showDelay: 0,
+                transitionDuration: 0.2
+            },
+            series: [
+                {
+                    name: 'Demo',
+                    type: 'map',
+                    roam: true,
+                    map: 'WorldZh',
+                    nameProperty: 'name',
+                    selectedMode: 'multiple',
+                    select: {
+                        label: {
+                            show: true //Ä¬ÈÏÏÔÊ¾Ãû³Æ
+                        },
+                        itemStyle:{
+                            areaColor:'#ff0000' //Ä¬ÈÏ¸ßÁÁÑÕÉ«
+                        }
+                    },
+                    emphasis: {
+                        label: {
+                            show: true
+                        }
+                    },
+                    data: [ ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+
+        // Ìí¼Ó¿Ø¼şÊÂ¼ş¼àÌı
+        colorPicker.addEventListener('input', function() {
+            option.series[0].select.itemStyle.areaColor = this.value;
+            myChart.setOption(option);
+        });
+
+        nameCheckbox.addEventListener('change', function() {
+            const show = this.checked;
+            option.series[0].select.label.show = show;
+            option.series[0].emphasis.label.show = show;
+            myChart.setOption(option);
+        });
+
+        // init table
+        var props = worldGeoJsonZh.features.map(f => f.properties);
+        var table = convertArrayToHtmlTable(props);
+        tableDom.appendChild(table);
+
+        // function to convert JSON data to HTML table
+        function convertArrayToHtmlTable(arr) {
+            let table = document.createElement("table");
+            let cols = Object.keys(arr[0]);
+            let thead = document.createElement("thead");
+            let tr = document.createElement("tr");
+            cols.forEach((item) => {
+            let th = document.createElement("th");
+                th.innerText = item;
+                tr.appendChild(th);
+            });
+            thead.appendChild(tr);
+            table.append(tr)
+            arr.forEach((item) => {
+                let tr = document.createElement("tr");
+                let vals = Object.values(item);
+                vals.forEach((elem) => {
+                    let td = document.createElement("td");
+                    td.innerText = elem;
+                    tr.appendChild(td);
+                });
+                table.appendChild(tr);
+            });
+            return table;
+        }
+    </script>
+</body>
+</html>
