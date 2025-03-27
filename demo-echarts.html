@@ -16,11 +16,33 @@
         #chart-container{
             height: 520px;
         }
+        .controls {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
     
     <h2>Map</h2>
+    <div class="controls">
+        <div class="control-group">
+            <label for="highlight-color">高亮颜色:</label>
+            <input type="color" id="highlight-color" value="#ff0000">
+        </div>
+        <div class="control-group">
+            <label for="show-name">是否显示地区名称:</label>
+            <input type="checkbox" id="show-name" checked>
+        </div>
+    </div>
     <div id="chart-container"></div>
 
     <h2>Table</h2>
@@ -38,10 +60,13 @@
 
         var chartDom = document.getElementById("chart-container")
         var tableDom = document.getElementById("table-container")
+        var colorPicker = document.getElementById("highlight-color")
+        var nameCheckbox = document.getElementById("show-name")
 
         // init chart
         var myChart = echarts.init(chartDom);
         echarts.registerMap('WorldZh', worldGeoJsonZh);
+        
         // echarts map options
         var option = {
             tooltip: {
@@ -56,6 +81,15 @@
                     roam: true,
                     map: 'WorldZh',
                     nameProperty: 'name',
+                    selectedMode: 'multiple',
+                    select: {
+                        label: {
+                            show: true //ĬɏДʾĻԆ
+                        },
+                        itemStyle:{
+                            areaColor:'#ff0000' //Ĭɏٟҕɫ
+                        }
+                    },
                     emphasis: {
                         label: {
                             show: true
@@ -66,6 +100,19 @@
             ]
         };
         myChart.setOption(option);
+
+        // ͭݓ࠘ݾ˂ݾݠͽ
+        colorPicker.addEventListener('input', function() {
+            option.series[0].select.itemStyle.areaColor = this.value;
+            myChart.setOption(option);
+        });
+
+        nameCheckbox.addEventListener('change', function() {
+            const show = this.checked;
+            option.series[0].select.label.show = show;
+            option.series[0].emphasis.label.show = show;
+            myChart.setOption(option);
+        });
 
         // init table
         var props = worldGeoJsonZh.features.map(f => f.properties);
